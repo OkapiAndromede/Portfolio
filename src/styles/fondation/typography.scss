@@ -1,12 +1,4 @@
-h1 {
-  font-family: "Bruno Ace", sans-serif;
-}
-
-h2,
-h3,
-h4,
-p,
-li,
-a {
-  font-family: "Manrope", sans-serif;
-}
+/****Typography style****/
+$primary-typography: "Manrope", sans-serif;
+$secondary-typography: "IBM Plex Mono", monospace;
+$tertiary-typography: "Bruno Ace", sans-serif;
