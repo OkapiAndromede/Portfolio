@@ -1,21 +1,24 @@
 @use "../../../styles/settings/variables.scss" as variable;
 
-.navbar__link {
-  display: flex;
-  align-items: stretch;
-  height: fit-content;
-  background-color: variable.$primary-color;
-  border: 1px solid rgba($color: #fff, $alpha: 0.4);
-  border-radius: 30px;
-  padding: 0px 12px;
+.navBar {
+  margin-top: 24px;
+  .navbar__link {
+    display: flex;
+    align-items: stretch;
+    height: fit-content;
+    background-color: variable.$primary-color;
+    border: 1px solid rgba($color: #fff, $alpha: 0.4);
+    border-radius: 30px;
+    padding: 0px 12px;
 
-  li {
-    padding: 8px 9px;
-    font-size: variable.$fs-landing-mobile-navbar;
-  }
+    li {
+      padding: 8px 9px;
+      font-size: variable.$fs-landing-mobile-navbar;
+    }
 
-  &--expertise {
-    border-right: 1px dashed variable.$nb-stroke-color;
-    border-left: 1px dashed variable.$nb-stroke-color;
+    &--expertise {
+      border-right: 1px dashed variable.$nb-stroke-color;
+      border-left: 1px dashed variable.$nb-stroke-color;
+    }
   }
 }
