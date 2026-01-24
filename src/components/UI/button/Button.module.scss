@@ -1,0 +1,20 @@
+@use "../../../styles/settings/variables.scss" as variable;
+@use "../../../styles/fondation/typography.scss" as typo;
+
+.CTA {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: variable.$tertiary-color;
+  border: none;
+  border-radius: 30px;
+  padding: 12.5px 19px;
+  font-family: typo.$primary-typography;
+  font-size: variable.$fs-landing-mobile-cta;
+  position: relative;
+}
+
+.rightArrow {
+  width: 22px;
+  height: 22px;
+}
