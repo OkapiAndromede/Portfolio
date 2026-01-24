@@ -16,6 +16,7 @@
   background-color: rgba($color: #fff, $alpha: 0.01);
   backdrop-filter: blur(2px);
   padding: 13px 8px;
+  margin-bottom: 53px;
   &__title {
     font-size: variable.$fs-landing-mobile-h1;
     color: variable.$h1-color;
