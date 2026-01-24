@@ -1,8 +1,33 @@
+@use "../../styles/settings/variables.scss" as variable;
+@use "../../styles/fondation/typography.scss" as typo;
+
 .landing {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   background: url(/public/landinBg.jpg) center/cover no-repeat;
   min-height: 100vh;
   min-width: 100vw;
+}
+
+.heroBanner {
+  margin-top: 88px;
+  background-color: rgba($color: #fff, $alpha: 0.01);
+  backdrop-filter: blur(2px);
+  padding: 13px 8px;
+  &__title {
+    font-size: variable.$fs-landing-mobile-h1;
+    color: variable.$h1-color;
+    text-align: center;
+    line-height: 39.6px;
+    letter-spacing: -2%;
+  }
+  &__subtitle {
+    font-size: variable.$fs-landing-mobile-subtitle;
+    font-family: typo.$primary-typography;
+    text-align: center;
+    margin-top: 24px;
+    line-height: 31.2px;
+  }
 }
