@@ -1,7 +1,7 @@
 @use "../../../styles/settings/variables.scss" as variable;
 
 .navBar {
-  margin-top: 24px;
+  padding-top: 24px;
   .navbar__link {
     display: flex;
     align-items: stretch;
