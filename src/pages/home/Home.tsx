@@ -1,4 +1,5 @@
 import NavBar from "../../components/layout/navBar/NavBar";
+import Button from "../../components/UI/button/Button";
 import style from "./Home.module.scss";
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
             living product <br />
           </p>
         </section>
+        <Button />
       </header>
     </>
   );
