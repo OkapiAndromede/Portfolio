@@ -17,11 +17,13 @@
   backdrop-filter: blur(2px);
   padding: 13px 8px;
   margin-bottom: 53px;
-  @media (768px < width <= 1024px) {
+  @media (768px <= width <= 1024px) {
     margin-top: 288px;
+    margin-bottom: 164px;
   }
   @media (min-width: 1025px) {
-    margin-top: 199px;
+    margin-top: 288px;
+    margin-bottom: 229px;
   }
   &__title {
     font-size: variable.$fs-landing-mobile-h1;
@@ -29,7 +31,7 @@
     text-align: center;
     line-height: 39.6px;
     letter-spacing: -2%;
-    @media (768px < width <= 1024px) {
+    @media (768px <= width <= 1024px) {
       font-size: variable.$fs-landing-tablet-h1;
     }
     @media (min-width: 1025px) {
@@ -47,7 +49,7 @@
     text-align: center;
     margin-top: 24px;
     line-height: 31.2px;
-    @media (768px < width <= 1024px) {
+    @media (768px <= width <= 1024px) {
       font-size: variable.$fs-landing-tablet-subtitle;
       line-height: 60px;
       margin-top: 32px;

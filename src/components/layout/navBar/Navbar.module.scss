@@ -19,7 +19,7 @@
     li {
       padding: 8px 9px;
       font-size: variable.$fs-landing-mobile-navbar;
-      @media (768px < width <= 1024px) {
+      @media (768px <= width <= 1024px) {
         font-size: variable.$fs-landing-tablet-navbar;
         padding: 12px 24px;
       }
