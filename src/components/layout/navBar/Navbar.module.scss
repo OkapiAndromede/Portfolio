@@ -2,7 +2,7 @@
 
 .navBar {
   padding-top: 24px;
-  @media (768px < width <= 1024px) {
+  @media (min-width: 768px) {
     padding-top: 48px;
   }
   .navbar__link {
@@ -22,6 +22,10 @@
       @media (768px < width <= 1024px) {
         font-size: variable.$fs-landing-tablet-navbar;
         padding: 12px 24px;
+      }
+      @media (min-width: 1025px) {
+        padding: 20px 72px;
+        font-size: variable.$fs-landing-desktop-navbar;
       }
     }
 
