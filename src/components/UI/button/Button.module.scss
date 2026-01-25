@@ -12,9 +12,25 @@
   font-family: typo.$primary-typography;
   font-size: variable.$fs-landing-mobile-cta;
   position: relative;
+  @media (768px <= width <= 1024px) {
+    font-size: variable.$fs-landing-tablet-cta;
+    padding: 20px;
+  }
+  @media (min-width: 1025px) {
+    font-size: variable.$fs-landing-desktop-cta;
+    padding: 17.5px 20px;
+  }
 }
 
 .rightArrow {
   width: 22px;
   height: 22px;
+  @media (768px <= width <= 1024px) {
+    width: 25px;
+    height: 25px;
+  }
+  @media (min-width: 1025px) {
+    width: 32px;
+    height: 32px;
+  }
 }
