@@ -9,14 +9,16 @@ function Home() {
         <NavBar />
         <section className={style["heroBanner"]}>
           <h1 className={style["heroBanner__title"]}>
-            NEAL
-            <br />
+            NEAL {""}
+            <br className={style["heroBanner__title--break"]} />
             MULLER
           </h1>
           <p className={style["heroBanner__subtitle"]}>
             Front-end developer <br />
-            crafting ideas to <br />
-            living product <br />
+            crafting ideas to {""}
+            <br className={style["heroBanner__subtitle--break"]} />
+            living product
+            <br className={style["heroBanner__subtitle--break"]} />
           </p>
         </section>
         <Button />
