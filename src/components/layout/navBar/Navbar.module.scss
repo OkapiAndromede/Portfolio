@@ -2,6 +2,9 @@
 
 .navBar {
   padding-top: 24px;
+  @media (768px < width <= 1024px) {
+    padding-top: 48px;
+  }
   .navbar__link {
     display: flex;
     align-items: stretch;
