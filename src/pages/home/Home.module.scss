@@ -17,12 +17,29 @@
   backdrop-filter: blur(2px);
   padding: 13px 8px;
   margin-bottom: 53px;
+  @media (768px < width <= 1024px) {
+    margin-top: 288px;
+  }
+  @media (min-width: 1025px) {
+    margin-top: 199px;
+  }
   &__title {
     font-size: variable.$fs-landing-mobile-h1;
     color: variable.$h1-color;
     text-align: center;
     line-height: 39.6px;
     letter-spacing: -2%;
+    @media (768px < width <= 1024px) {
+      font-size: variable.$fs-landing-tablet-h1;
+    }
+    @media (min-width: 1025px) {
+      font-size: variable.$fs-landing-desktop-h1;
+    }
+    &--break {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
   }
   &__subtitle {
     font-size: variable.$fs-landing-mobile-subtitle;
@@ -30,5 +47,20 @@
     text-align: center;
     margin-top: 24px;
     line-height: 31.2px;
+    @media (768px < width <= 1024px) {
+      font-size: variable.$fs-landing-tablet-subtitle;
+      line-height: 60px;
+      margin-top: 32px;
+    }
+    @media (min-width: 1025px) {
+      font-size: variable.$fs-landing-desktop-subtitle;
+      margin-top: 40px;
+      line-height: 60px;
+    }
+    &--break {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
   }
 }
