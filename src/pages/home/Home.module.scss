@@ -9,6 +9,9 @@
   background: url(/public/landinBg.jpg) center/cover no-repeat;
   min-height: 100vh;
   min-width: 100vw;
+  @media (min-width: 1025px) {
+    padding-bottom: 200px;
+  }
 }
 
 .heroBanner {
