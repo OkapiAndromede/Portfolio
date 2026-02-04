@@ -1,7 +1,8 @@
 import NavBar from "../../components/layout/navBar/NavBar";
 import Button from "../../components/UI/button/Button";
+import Project from "../../components/UI/project/Project";
 import style from "./Home.module.scss";
-
+import { projects } from "../../assets/data/projects";
 function Home() {
   return (
     <>
@@ -23,6 +24,14 @@ function Home() {
         </section>
         <Button />
       </header>
+      <main>
+        <section className={style["projectSection"]}>
+          <h2 className={style["projectSection__title"]}>Recent project</h2>
+          {projects.map((project) => (
+            <Project key={project.id} project={project} />
+          ))}
+        </section>
+      </main>
     </>
   );
 }
