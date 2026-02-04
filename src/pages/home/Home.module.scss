@@ -76,5 +76,9 @@
     font-family: typo.$primary-typography;
     font-weight: 400;
     margin-top: 24px;
+    @media (min-width: 768px) {
+      font-size: variable.$fs-site-h2;
+      margin-top: 72px;
+    }
   }
 }
