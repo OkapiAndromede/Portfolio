@@ -33,10 +33,12 @@ function Project({ project }: Props) {
             preload="none"
             /> */}
           <img
+            className={styles["item__media--first"]}
             src={project.images.first.small}
             alt={`image du projet ${project.title}`}
           />
           <img
+            className={styles["item__media--second"]}
             src={project.images.second.small}
             alt={`image du projet ${project.title}`}
           />
