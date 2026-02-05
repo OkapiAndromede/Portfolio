@@ -74,6 +74,7 @@
   flex-direction: column;
   align-items: center;
   background-color: variable.$background-color;
+  padding-bottom: 99px;
   &__title {
     font-size: variable.$fs-site-mobile-h2;
     font-family: typo.$primary-typography;
@@ -83,5 +84,20 @@
       font-size: variable.$fs-site-h2;
       margin-top: 72px;
     }
+  }
+}
+.expertiseSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: #7f824d;
+  background-color: #b4c3ae;
+  &__title {
+    font-size: variable.$fs-site-mobile-h2;
+    font-family: typo.$primary-typography;
+    font-weight: 400;
+    // color: #fff;
+    padding-top: 24px;
+    margin-bottom: 30px;
   }
 }
