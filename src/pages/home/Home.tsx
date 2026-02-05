@@ -3,6 +3,8 @@ import Button from "../../components/UI/button/Button";
 import Project from "../../components/UI/project/Project";
 import style from "./Home.module.scss";
 import { projects } from "../../assets/data/projects";
+import { expertises } from "../../assets/data/expertises";
+import Card from "../../components/UI/card/Card";
 function Home() {
   return (
     <>
@@ -29,6 +31,12 @@ function Home() {
           <h2 className={style["projectSection__title"]}>Recent project</h2>
           {projects.map((project) => (
             <Project key={project.id} project={project} />
+          ))}
+        </section>
+        <section className={style["expertiseSection"]}>
+          <h2 className={style["expertiseSection__title"]}>Expertise</h2>
+          {expertises.map((expertise) => (
+            <Card key={expertise.id} expertise={expertise} />
           ))}
         </section>
       </main>
