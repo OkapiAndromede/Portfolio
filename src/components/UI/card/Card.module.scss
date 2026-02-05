@@ -1,0 +1,45 @@
+@use "../../../styles/settings/variables.scss" as variable;
+@use "../../../styles/fondation/typography.scss" as typo;
+.card {
+  background-color: #fff;
+  border-radius: 18px;
+  width: 288px;
+  height: 400px;
+  margin-bottom: 30px;
+  padding: 0 8px 0 16px;
+  font-family: typo.$primary-typography;
+  &__logo {
+    display: block;
+    border: solid 3px black;
+    border-radius: 50%;
+    width: 73px;
+    height: 73px;
+    padding: 8px;
+    margin: 25px auto 0 auto;
+  }
+  &__title {
+    font-size: variable.$fs-site-mobile-h3;
+    font-weight: 500;
+  }
+  &__title::after {
+    display: block;
+    content: "";
+    border: solid 1px black;
+    width: 65%;
+    margin: 24px auto 16px auto;
+  }
+  &__txt {
+    &--intro {
+      line-height: 24px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    &--core {
+      line-height: 25.6px;
+    }
+  }
+}
+.card:last-child .card__logo {
+  background-color: #007acc;
+  padding-bottom: 20px;
+}
