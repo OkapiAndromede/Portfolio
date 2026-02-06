@@ -87,17 +87,34 @@
   }
 }
 .expertiseSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   // background-color: #7f824d;
   background-color: #b4c3ae;
   &__title {
+    margin: 0px auto 30px auto;
     font-size: variable.$fs-site-mobile-h2;
     font-family: typo.$primary-typography;
     font-weight: 400;
     // color: #fff;
     padding-top: 24px;
-    margin-bottom: 30px;
+    width: fit-content;
+    @media (min-width: 768px) {
+      font-size: variable.$fs-site-h2;
+    }
+    @media (768px <= width <= 1024px) {
+      margin: 0px 0px 34px 49px;
+    }
+    @media (min-width: 1025px) {
+      margin: 0px 0px 82px 128px;
+    }
+  }
+  &__core {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1025px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+    }
   }
 }
