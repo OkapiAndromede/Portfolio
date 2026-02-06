@@ -5,6 +5,7 @@ import style from "./Home.module.scss";
 import { projects } from "../../assets/data/projects";
 import { expertises } from "../../assets/data/expertises";
 import Card from "../../components/UI/card/Card";
+import Footer from "../../components/layout/footer/Footer";
 function Home() {
   return (
     <>
@@ -77,6 +78,7 @@ function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
