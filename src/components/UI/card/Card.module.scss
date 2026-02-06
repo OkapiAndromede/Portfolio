@@ -8,6 +8,13 @@
   margin-bottom: 30px;
   padding: 0 8px 0 16px;
   font-family: typo.$primary-typography;
+  @media (min-width: 768px) {
+    width: 361px;
+    height: 470px;
+  }
+  @media (768px <= width <= 1024px) {
+    margin-bottom: 32px;
+  }
   &__logo {
     display: block;
     border: solid 3px black;
@@ -16,10 +23,19 @@
     height: 73px;
     padding: 8px;
     margin: 25px auto 0 auto;
+    @media (min-width: 768px) {
+      width: 107px;
+      height: 107px;
+      margin: 43px auto 0 auto;
+    }
   }
   &__title {
     font-size: variable.$fs-site-mobile-h3;
     font-weight: 500;
+    @media (min-width: 768px) {
+      font-size: variable.$fs-site-h3;
+      margin-top: 40px;
+    }
   }
   &__title::after {
     display: block;
@@ -27,6 +43,9 @@
     border: solid 1px black;
     width: 65%;
     margin: 24px auto 16px auto;
+    @media (min-width: 768px) {
+      width: 60%;
+    }
   }
   &__txt {
     &--intro {
