@@ -1,0 +1,20 @@
+@use "../../../styles/settings/variables.scss" as variable;
+@use "../../../styles/fondation/typography.scss" as typo;
+
+footer {
+  background-color: variable.$secondary-color;
+
+  .footer__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: variable.$fs-site-mobile-h3;
+    font-family: typo.$primary-typography;
+    padding: 7px 16px;
+    @media (min-width: 768px) {
+      font-size: variable.$fs-site-h3;
+      padding: 31px 128px;
+    }
+  }
+}
