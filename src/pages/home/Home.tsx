@@ -35,9 +35,11 @@ function Home() {
         </section>
         <section className={style["expertiseSection"]}>
           <h2 className={style["expertiseSection__title"]}>Expertise</h2>
-          {expertises.map((expertise) => (
-            <Card key={expertise.id} expertise={expertise} />
-          ))}
+          <div className={style["expertiseSection__core"]}>
+            {expertises.map((expertise) => (
+              <Card key={expertise.id} expertise={expertise} />
+            ))}
+          </div>
         </section>
       </main>
     </>
