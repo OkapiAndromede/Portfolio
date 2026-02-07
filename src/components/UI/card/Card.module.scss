@@ -4,13 +4,13 @@
   background-color: #fff;
   border-radius: 18px;
   width: 288px;
-  height: 400px;
+  height: 425px;
   margin-bottom: 30px;
   padding: 0 8px 0 16px;
   font-family: typo.$primary-typography;
   @media (min-width: 768px) {
-    width: 361px;
-    height: 470px;
+    width: 277px;
+    height: 430px;
   }
   @media (768px <= width <= 1024px) {
     margin-bottom: 32px;
@@ -24,17 +24,18 @@
     padding: 8px;
     margin: 25px auto 0 auto;
     @media (min-width: 768px) {
-      width: 107px;
-      height: 107px;
+      width: 76px;
+      height: 76px;
       margin: 43px auto 0 auto;
     }
   }
   &__title {
     font-size: variable.$fs-site-mobile-h3;
+    margin-top: 32px;
     font-weight: 500;
     @media (min-width: 768px) {
-      font-size: variable.$fs-site-h3;
-      margin-top: 40px;
+      font-size: variable.$fs-expertise-site-h3;
+      margin-top: 24px;
     }
   }
   &__title::after {
@@ -45,6 +46,7 @@
     margin: 24px auto 16px auto;
     @media (min-width: 768px) {
       width: 60%;
+      margin: 16px auto;
     }
   }
   &__txt {
@@ -52,6 +54,9 @@
       line-height: 24px;
       font-weight: 500;
       margin-bottom: 16px;
+      @media (min-width: 768px) {
+        line-height: 22px;
+      }
     }
     &--core {
       line-height: 25.6px;
