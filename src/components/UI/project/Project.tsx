@@ -34,12 +34,12 @@ function Project({ project }: Props) {
             /> */}
           <img
             className={styles["item__media--first"]}
-            src={project.images.first.small}
+            src={project.images.first}
             alt={`image du projet ${project.title}`}
           />
           <img
             className={styles["item__media--second"]}
-            src={project.images.second.small}
+            src={project.images.second}
             alt={`image du projet ${project.title}`}
           />
         </div>
