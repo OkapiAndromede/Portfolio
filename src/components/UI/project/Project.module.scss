@@ -99,16 +99,15 @@
       padding-left: 88px;
     }
     img {
-      width: 288px;
-      height: 177px;
+      width: 100%;
+      max-width: 288px;
+      height: auto;
       border-radius: 16px;
       @media (768px <= width <= 1024px) {
-        width: 262px;
-        height: 154px;
+        max-width: 262px;
       }
       @media (min-width: 1025px) {
-        width: 474px;
-        height: 256px;
+        max-width: 474px;
       }
     }
   }
