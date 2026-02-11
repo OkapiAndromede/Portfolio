@@ -30,6 +30,26 @@
     @media (768px <= width <= 1024px) {
       margin: 32px 142px 0px 142px;
     }
+    .item__content--button {
+      position: relative;
+      margin-top: 32px;
+      @media (min-width: 1025px) {
+        display: none;
+      }
+      .dashBar {
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        border: dashed 1px rgba($color: variable.$secondary-color, $alpha: 1);
+        width: 275px;
+        @media (768px <= width <= 1024px) {
+          width: 450px;
+        }
+      }
+    }
     .item__content--introduction,
     .item__content--core,
     .item__content--conclusion {
