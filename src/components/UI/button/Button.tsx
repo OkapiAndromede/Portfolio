@@ -1,5 +1,7 @@
+import { useState } from "react";
 import styles from "./Button.module.scss";
-function Button() {
+
+export function Button() {
   return (
     <>
       <button className={styles["CTA"]}>
@@ -16,4 +18,21 @@ function Button() {
     </>
   );
 }
-export default Button;
+
+export function ShowButton() {
+  const [isActive, setIsActive] = useState(false);
+  return (
+    <>
+      <button
+        className={`${styles.showButton} ${isActive ? styles.isActive : ""}`}
+        type="button"
+        onClick={() => setIsActive((prev) => !prev)}
+      >
+        <span className={`${styles.showButton__bar}`}></span>
+        <span
+          className={`${styles.showButton__bar} ${styles.showButton__vertical}`}
+        ></span>
+      </button>
+    </>
+  );
+}
