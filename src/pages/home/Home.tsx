@@ -1,11 +1,11 @@
 import NavBar from "../../components/layout/navBar/NavBar";
-import Button from "../../components/UI/button/Button";
 import Project from "../../components/UI/project/Project";
 import style from "./Home.module.scss";
 import { projects } from "../../assets/data/projects";
 import { expertises } from "../../assets/data/expertises";
 import Card from "../../components/UI/card/Card";
 import Footer from "../../components/layout/footer/Footer";
+import { Button } from "../../components/UI/button/Button";
 function Home() {
   return (
     <>
