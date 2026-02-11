@@ -78,24 +78,26 @@ function Project({ project }: Props) {
               </svg>
             </div>
           </div>
-          <div className={styles["item__content--button"]}>
-            <span className={styles["dashBar"]}></span>
-            <ShowButton isActive={isActive} onClick={showTxt} />
+          <div className={`${isActive ? styles.showMore : styles.showLess}`}>
+            {Core && <Core />}
+            {Conclusion && <Conclusion />}
+            <div className={styles["item__photo"]}>
+              <img
+                className={styles["item__photo--first"]}
+                src={project.images.first}
+                alt={`image du projet ${project.title}`}
+              />
+              <img
+                className={styles["item__photo--second"]}
+                src={project.images.second}
+                alt={`image du projet ${project.title}`}
+              />
+            </div>
           </div>
-          {Core && <Core />}
-          {Conclusion && <Conclusion />}
         </div>
-        <div className={styles["item__photo"]}>
-          <img
-            className={styles["item__photo--first"]}
-            src={project.images.first}
-            alt={`image du projet ${project.title}`}
-          />
-          <img
-            className={styles["item__photo--second"]}
-            src={project.images.second}
-            alt={`image du projet ${project.title}`}
-          />
+        <div className={styles["item__button"]}>
+          <span className={styles["item__button--dashBar"]}></span>
+          <ShowButton isActive={isActive} onClick={showTxt} />
         </div>
       </article>
     </>
