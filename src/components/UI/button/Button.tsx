@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./Button.module.scss";
 
 export function Button() {
@@ -19,14 +18,18 @@ export function Button() {
   );
 }
 
-export function ShowButton() {
-  const [isActive, setIsActive] = useState(false);
+type ShowButtonProps = {
+  isActive: boolean;
+  onClick: () => void;
+};
+
+export function ShowButton({ isActive, onClick }: ShowButtonProps) {
   return (
     <>
       <button
         className={`${styles.showButton} ${isActive ? styles.isActive : ""}`}
         type="button"
-        onClick={() => setIsActive((prev) => !prev)}
+        onClick={onClick}
       >
         <span className={`${styles.showButton__bar}`}></span>
         <span
