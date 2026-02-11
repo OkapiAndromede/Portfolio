@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import type { Project as ProjectType } from "../../../assets/data/projects";
 import styles from "./Project.module.scss";
 import { projectTextMap } from "./projectTextMap";
@@ -10,6 +10,7 @@ type Props = {
 
 function Project({ project }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isActive, setIsActive] = useState(false);
 
   const Introduction = projectTextMap[project.id]?.introduction;
   const Core = projectTextMap[project.id]?.core;
@@ -34,6 +35,11 @@ function Project({ project }: Props) {
       }
     }
   };
+  //Fonction pour gérer l'affichage du texte
+  const showTxt = () => {
+    setIsActive((prev) => !prev);
+  };
+
   return (
     <>
       <article className={styles["item"]}>
@@ -74,7 +80,7 @@ function Project({ project }: Props) {
           </div>
           <div className={styles["item__content--button"]}>
             <span className={styles["dashBar"]}></span>
-            <ShowButton />
+            <ShowButton isActive={isActive} onClick={showTxt} />
           </div>
           {Core && <Core />}
           {Conclusion && <Conclusion />}
