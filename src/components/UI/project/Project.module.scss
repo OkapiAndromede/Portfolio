@@ -30,26 +30,6 @@
     @media (768px <= width <= 1024px) {
       margin: 32px 142px 0px 142px;
     }
-    .item__content--button {
-      position: relative;
-      margin-top: 32px;
-      @media (min-width: 1025px) {
-        display: none;
-      }
-      .dashBar {
-        margin: 0 auto;
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 50%;
-        border: dashed 1px rgba($color: variable.$secondary-color, $alpha: 1);
-        width: 275px;
-        @media (768px <= width <= 1024px) {
-          width: 450px;
-        }
-      }
-    }
     .item__content--introduction,
     .item__content--core,
     .item__content--conclusion {
@@ -163,5 +143,39 @@
         max-width: 378px;
       }
     }
+  }
+  .item__button {
+    position: relative;
+    margin-top: 32px;
+    @media (min-width: 1025px) {
+      display: none;
+    }
+    &--dashBar {
+      margin: 0 auto;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      border: dashed 1px rgba($color: variable.$secondary-color, $alpha: 1);
+      width: 275px;
+      @media (768px <= width <= 1024px) {
+        width: 450px;
+      }
+    }
+  }
+}
+.showMore {
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 2500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.showLess {
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+  @media (min-width: 1025px) {
+    max-height: none;
+    height: fit-content;
   }
 }
