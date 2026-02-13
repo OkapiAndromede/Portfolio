@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import style from "./Form.module.scss";
+import { SubmitButton } from "../button/Button";
 
 function Form() {
   const {
@@ -63,6 +64,7 @@ function Form() {
           })}
         />
       </div>
+      <SubmitButton />
     </form>
   );
 }
