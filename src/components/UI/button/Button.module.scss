@@ -76,3 +76,23 @@
   transform: rotate(90deg) scaleX(0);
   opacity: 0;
 }
+
+/****Submit Button ****/
+.submitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 119px;
+  height: 27px;
+  border: none;
+  border-radius: 30px;
+  background-color: variable.$secondary-color;
+  color: white;
+  padding: 8px 0px;
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+}
