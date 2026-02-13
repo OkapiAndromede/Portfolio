@@ -1,10 +1,14 @@
+import Form from "../../components/UI/form/Form";
 import style from "./Contact.module.scss";
 
 function Contact() {
   return (
     <>
-      <main>
-        <div className={style["contactBg"]}> </div>
+      <main className={style["contactLayout"]}>
+        <div className={style["contactLayout__bg"]}> </div>
+        <div className={style["contactLayout__form"]}>
+          <Form />
+        </div>
       </main>
     </>
   );
