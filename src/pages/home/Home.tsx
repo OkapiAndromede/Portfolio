@@ -6,6 +6,7 @@ import { expertises } from "../../assets/data/expertises";
 import Card from "../../components/UI/card/Card";
 import Footer from "../../components/layout/footer/Footer";
 import { Button } from "../../components/UI/button/Button";
+import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <>
@@ -25,7 +26,9 @@ function Home() {
             <br className={style["heroBanner__subtitle--break"]} />
           </p>
         </section>
-        <Button />
+        <NavLink to={"/contact"}>
+          <Button />
+        </NavLink>
       </header>
       <main>
         <section className={style["projectSection"]}>
@@ -74,7 +77,9 @@ function Home() {
                 ability to evolve.
               </p>
             </div>
-            <Button />
+            <NavLink to={"/contact"}>
+              <Button />
+            </NavLink>
           </div>
         </section>
       </main>
