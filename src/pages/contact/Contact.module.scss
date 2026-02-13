@@ -1,0 +1,8 @@
+@use "../../styles/settings/variables.scss" as variable;
+
+.contactBg {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url("../../assets/images/bg_contact_mobile.webp") center/cover
+    no-repeat;
+}
