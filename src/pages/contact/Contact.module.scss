@@ -5,7 +5,12 @@
   min-width: 100vw;
   background: url("../../assets/images/bg_contact_mobile.webp") center/cover
     no-repeat;
-  //   position: relative;
+  position: relative;
+  &--button {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
 }
 .contactLayout__form {
   position: absolute;
