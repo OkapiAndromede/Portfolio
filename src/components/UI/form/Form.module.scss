@@ -8,7 +8,7 @@
   align-items: center;
   width: 268px;
   height: 320px;
-  background-color: rgba($color: variable.$contact-bg-color, $alpha: 1);
+  background-color: rgba($color: variable.$contact-bg-color, $alpha: 0.2);
   border-radius: 16px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(40px);
