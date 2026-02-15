@@ -96,10 +96,19 @@
   font-family: typo.$secondary-typography;
   font-weight: 500;
   font-size: variable.$fs-landing-mobile-cta;
+  @media (min-width: 768px) {
+    width: 157px;
+    height: 62px;
+    font-size: variable.$fs-body;
+  }
   &__arrow {
     width: 24px;
     height: 24px;
     fill: white;
+    @media (min-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 /****Home Button ****/
@@ -125,10 +134,18 @@
     rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0.05) 100%
   );
+  @media (min-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
 
   &__logo {
     width: 33px;
     height: 33px;
     color: rgba($color: variable.$secondary-color, $alpha: 0.9);
+    @media (min-width: 768px) {
+      width: 45px;
+      height: 45px;
+    }
   }
 }
