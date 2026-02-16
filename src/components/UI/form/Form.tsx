@@ -1,16 +1,39 @@
 import { useForm } from "react-hook-form";
 import style from "./Form.module.scss";
 import { SubmitButton } from "../button/Button";
+import { toast } from "react-toastify";
 
 function Form() {
+  type ContactFormValues = {
+    firstName: string;
+    lastName: string;
+    email: string;
+    message: string;
+  };
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<ContactFormValues>();
+
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) throw new Error("Error sending");
+      toast.success("Message sent successfully");
+    } catch (error) {
+      toast.error("Failed to send your message");
+    }
+  };
 
   return (
-    <form className={style["formLayout"]}>
+    <form className={style["formLayout"]} onSubmit={handleSubmit(onSubmit)}>
       <div className={style["field"]}>
         <div className={style["field__name"]}>
           <input
@@ -25,6 +48,7 @@ function Form() {
               },
             })}
           />
+          {errors.firstName && <span>{errors.firstName.message}</span>}
           <input
             type="text"
             id="lastName"
@@ -37,6 +61,7 @@ function Form() {
               },
             })}
           />
+          {errors.lastName && <span>{errors.lastName.message}</span>}
         </div>
         <input
           type="text"
@@ -51,6 +76,7 @@ function Form() {
             },
           })}
         />
+        {errors.email && <span>{errors.email.message}</span>}
         <textarea
           id="message"
           className={style["field__message"]}
@@ -63,6 +89,7 @@ function Form() {
             },
           })}
         />
+        {errors.message && <span>{errors.message.message}</span>}
       </div>
       <SubmitButton />
     </form>
