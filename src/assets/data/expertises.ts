@@ -1,9 +1,10 @@
-import htmlLogo from "../logo/HTML_logo.svg";
+import htmlLogo from "../logo/html5_logo.svg";
 import reactLogo from "../logo/react_logo.svg";
-import typeScriptLogo from "../logo/typescript-original.svg";
+import typeScriptLogo from "../logo/typescript_plain.svg";
 
 export type Expertise = {
   id: "html/css" | "react" | "typescript";
+  class: string;
   title: string;
   introduction: string;
   core: string;
@@ -13,6 +14,7 @@ export type Expertise = {
 export const expertises: Expertise[] = [
   {
     id: "html/css",
+    class: "html__header",
     title: "HTML/CSS",
     introduction: "Every great interface starts with solid foundations.",
     core: "I build clean, accessible HTML and CSS layouts that adapt seamlessly across devices, ensuring clarity and consistency in every detail.",
@@ -20,6 +22,7 @@ export const expertises: Expertise[] = [
   },
   {
     id: "react",
+    class: "react__header",
     title: "React",
     introduction:
       "As interfaces grow more complex, maintaining clarity becomes essential.",
@@ -28,6 +31,7 @@ export const expertises: Expertise[] = [
   },
   {
     id: "typescript",
+    class: "typeScript__header",
     title: "TypeScript",
     introduction:
       "As projects scale, confidence in your code becomes critical.",
