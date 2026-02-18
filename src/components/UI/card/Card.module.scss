@@ -4,30 +4,31 @@
   background-color: #fff;
   border-radius: 18px;
   width: 288px;
-  height: 425px;
+  height: 490px;
   margin-bottom: 30px;
-  padding: 0 8px 0 16px;
+  padding: 8px 8px 0px 8px;
   font-family: typo.$primary-typography;
+
   @media (min-width: 768px) {
     width: 277px;
-    height: 430px;
+    height: 480px;
   }
   @media (768px <= width <= 1024px) {
     margin-bottom: 32px;
   }
   &__logo {
     display: block;
-    border: solid 3px black;
-    border-radius: 50%;
     width: 73px;
     height: 73px;
     padding: 8px;
-    margin: 25px auto 0 auto;
+
     @media (min-width: 768px) {
       width: 76px;
       height: 76px;
-      margin: 43px auto 0 auto;
     }
+  }
+  &__content {
+    padding-left: 8px;
   }
   &__title {
     font-size: variable.$fs-site-mobile-h3;
@@ -62,8 +63,24 @@
       line-height: 25.6px;
     }
   }
-}
-.card:last-child .card__logo {
-  background-color: #007acc;
-  padding-bottom: 20px;
+  /**** Design des headers ****/
+  .html__header,
+  .react__header,
+  .typeScript__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33%;
+    width: 100%;
+    border-radius: 18px 18px 100% 0% / 18px 18px 50% 100%;
+  }
+  .html__header {
+    background: linear-gradient(to bottom left, #ff8c00, #ffd700);
+  }
+  .react__header {
+    background: linear-gradient(to bottom left, #0072ff, #0000dd);
+  }
+  .typeScript__header {
+    background: linear-gradient(to bottom left, #11998e, #38ef7d);
+  }
 }
