@@ -16,6 +16,7 @@ footer {
       font-size: variable.$fs-site-h3;
       padding: 15px 128px;
     }
+
     &--repo,
     &--mail,
     &--social {
@@ -27,7 +28,6 @@ footer {
     &--mailLogo,
     &--socialLogo {
       fill: #f5f5f5;
-      // padding-top: 7px;
     }
     &--gitLogo {
       width: 25px;
