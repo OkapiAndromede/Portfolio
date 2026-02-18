@@ -6,9 +6,14 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  background: url(/public/landinBg.jpg) center/cover no-repeat;
+  background: url(/src/assets/images/bg_landing_mobile.webp) center/cover
+    no-repeat;
   min-height: 100vh;
   min-width: 100vw;
+  @media (min-width: 768px) {
+    background: url(/src/assets/images/bg_landing_desktop.webp) center/cover
+      no-repeat;
+  }
   @media (min-width: 1025px) {
     padding-bottom: 200px;
   }
@@ -120,11 +125,16 @@
   }
 }
 .aboutSection {
-  background: url(/public/landinBg.jpg) center/cover no-repeat;
+  background: url(/src/assets/images/bg_landing_mobile.webp) center/cover
+    no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  @media (min-width: 768px) {
+    background: url(/src/assets/images/bg_landing_desktop.webp) center/cover
+      no-repeat;
+  }
   @media (768px <= width <= 1024px) {
     min-height: auto;
   }
