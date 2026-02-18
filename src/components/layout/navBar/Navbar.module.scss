@@ -17,11 +17,19 @@
     backdrop-filter: blur(40px);
 
     li {
+      display: flex;
+      padding: 0;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 8px 9px;
+      width: 100%;
       font-size: variable.$fs-landing-mobile-navbar;
       @media (768px <= width <= 1024px) {
-        font-size: variable.$fs-landing-tablet-navbar;
         padding: 12px 24px;
+        font-size: variable.$fs-landing-tablet-navbar;
       }
       @media (min-width: 1025px) {
         padding: 20px 72px;
