@@ -31,13 +31,13 @@ function Home() {
         </NavLink>
       </header>
       <main>
-        <section className={style["projectSection"]}>
+        <section id="projectSection" className={style["projectSection"]}>
           <h2 className={style["projectSection__title"]}>Recent project</h2>
           {projects.map((project) => (
             <Project key={project.id} project={project} />
           ))}
         </section>
-        <section className={style["expertiseSection"]}>
+        <section id="expertiseSection" className={style["expertiseSection"]}>
           <h2 className={style["expertiseSection__title"]}>Expertise</h2>
           <div className={style["expertiseSection__core"]}>
             {expertises.map((expertise) => (
@@ -45,7 +45,7 @@ function Home() {
             ))}
           </div>
         </section>
-        <section className={style["aboutSection"]}>
+        <section id="aboutSection" className={style["aboutSection"]}>
           <h2 className={style["aboutSection__title"]}>About me</h2>
           <div className={style["aboutSection__core"]}>
             <div className={style["aboutSection__txt"]}>
