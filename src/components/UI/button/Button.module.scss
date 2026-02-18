@@ -21,6 +21,63 @@
     font-size: variable.$fs-landing-desktop-cta;
     padding: 17.5px 20px;
   }
+  //Configuration pour l'animation
+  position: relative;
+  z-index: 1; // On place le bouton au dessus du glow
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+
+  // Glow dore & blanc
+  &::before {
+    content: "";
+    // Palette : Or pur, Blanc brillant, Ton beige tertiaire, Or pâle
+    background: linear-gradient(
+      45deg,
+      #ffd700,
+      #ffffff,
+      variable.$tertiary-color,
+      #fff5b7,
+      #ffd700
+    );
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background-size: 200% 200%;
+    z-index: -1;
+    filter: blur(2px); // Un flou très léger en continu
+    opacity: 0.6; // On le voit toujours un peu (effet "aura")
+
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    animation: glowing 8s linear infinite;
+    transition: all 0.3s ease-in-out; // Transition sur toutes les propriétés
+    border-radius: 32px;
+  }
+  //Interaction
+  &:hover {
+    transform: scale(1.05); // L'effet d'agrandissement
+
+    &::before {
+      opacity: 1; // On affiche le glow au survol
+    }
+  }
+
+  &:active {
+    transform: scale(0.98); // Petit effet d'enfoncement au clic
+    background-color: darken(variable.$tertiary-color, 5%);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .rightArrow {
