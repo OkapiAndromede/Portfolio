@@ -92,15 +92,14 @@
   }
 }
 .expertiseSection {
-  // background-color: #7f824d;
-  background-color: #b4c3ae;
+  background: linear-gradient(to top, #6f4e37, #9b6b4a, #c68658);
   min-height: 100vh;
   &__title {
     margin: 0px auto 30px auto;
     font-size: variable.$fs-site-mobile-h2;
     font-family: typo.$primary-typography;
     font-weight: 500;
-    // color: #fff;
+    color: #fff;
     padding-top: 24px;
     width: fit-content;
     @media (min-width: 768px) {
