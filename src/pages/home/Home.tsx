@@ -50,31 +50,41 @@ function Home() {
           <div className={style["aboutSection__core"]}>
             <div className={style["aboutSection__txt"]}>
               <p className={style["aboutSection__txt--intro"]}>
-                I believe that building a project starts with making thoughtful
-                choices <br className={style["aboutSection__txt--ipadBreak"]} />
+                I believe that building a project starts with making{" "}
+                <span className={style["highlight"]}>thoughtful choices</span>{" "}
+                <br className={style["aboutSection__txt--ipadBreak"]} />
                 about the{" "}
                 <br className={style["aboutSection__txt--desktopBreak"]} />{" "}
                 tools used to turn an idea into a concrete solution.
               </p>
               <p className={style["aboutSection__txt--core"]}>
-                I focus on building interfaces that are clean, structured and
-                designed to{" "}
-                <br className={style["aboutSection__txt--ipadBreak"]} />
-                last.{" "}
-                <br className={style["aboutSection__txt--desktopBreak"]} /> From
-                HTML and CSS foundations to scalable React components enhanced
-                with TypeScript,{" "}
+                I focus on building interfaces that are clean, structured and{" "}
+                {""}
+                <span className={style["highlight"]}>
+                  designed to{" "}
+                  <br className={style["aboutSection__txt--ipadBreak"]} />
+                  last.
+                </span>
+                <br className={style["aboutSection__txt--desktopBreak"]} />
+                {""} From {""}
+                <span className={style["highlight"]}>HTML and CSS</span>{" "}
+                foundations to scalable{" "}
+                <span className={style["highlight"]}>React</span> components
+                enhanced{" "}
+                <br className={style["aboutSection__txt--ipadBreak"]} /> with{" "}
+                {""}
+                <span className={style["highlight"]}>TypeScript</span> ,{" "}
                 <br className={style["aboutSection__txt--desktopBreak"]} /> my
-                work is driven by clarity, consistency{" "}
+                work is driven by clarity, consistency and long-term{" "}
                 <br className={style["aboutSection__txt--ipadBreak"]} />
-                and long-term reliability.
+                reliability.
               </p>
               <p className={style["aboutSection__txt--conclusion"]}>
                 Each technical choice is made to serve both the user experience
                 and the <br className={style["aboutSection__txt--ipadBreak"]} />
                 product’s{" "}
                 <br className={style["aboutSection__txt--desktopBreak"]} />{" "}
-                ability to evolve.
+                ability <span className={style["highlight"]}>to evolve.</span>
               </p>
             </div>
             <NavLink to={"/contact"}>
