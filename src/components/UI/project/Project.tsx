@@ -70,6 +70,7 @@ function Project({ project }: Props) {
               ref={videoRef}
               className={styles["item__media--video"]}
               src={project.video}
+              poster={isMobile ? project.images.first : undefined}
               muted
               loop
               playsInline
