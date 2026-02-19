@@ -137,13 +137,6 @@
   @media (768px <= width <= 1024px) {
     min-height: auto;
   }
-  //Pour avoir une taille égale à l'écran
-  // @media (768px <= width <= 1024px) {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   min-height: 100vh;
-  // }
   @media (min-width: 1025px) {
     display: flex;
     flex-direction: column;
