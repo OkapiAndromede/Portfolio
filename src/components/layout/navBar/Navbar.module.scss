@@ -1,0 +1,45 @@
+@use "../../../styles/settings/variables.scss" as variable;
+
+.navBar {
+  padding-top: 24px;
+  @media (min-width: 768px) {
+    padding-top: 48px;
+  }
+  .navbar__link {
+    display: flex;
+    align-items: stretch;
+    height: fit-content;
+    background-color: rgba($color: variable.$primary-color, $alpha: 0.7);
+    border: 1px solid rgba($color: #fff, $alpha: 0.4);
+    border-radius: 30px;
+    padding: 0px 12px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(40px);
+
+    li {
+      display: flex;
+      padding: 0;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 9px;
+      width: 100%;
+      font-size: variable.$fs-landing-mobile-navbar;
+      @media (768px <= width <= 1024px) {
+        padding: 12px 24px;
+        font-size: variable.$fs-landing-tablet-navbar;
+      }
+      @media (min-width: 1025px) {
+        padding: 20px 72px;
+        font-size: variable.$fs-landing-desktop-navbar;
+      }
+    }
+
+    &--expertise {
+      border-right: 1px dashed variable.$nb-stroke-color;
+      border-left: 1px dashed variable.$nb-stroke-color;
+    }
+  }
+}

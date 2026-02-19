@@ -1,0 +1,73 @@
+@use "../../../styles/settings/variables.scss" as variable;
+@use "../../../styles/fondation/typography.scss" as typo;
+
+footer {
+  background-color: #2d1e17;
+
+  .footer__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f5f5f5;
+    font-size: variable.$fs-site-mobile-h3;
+    font-family: typo.$primary-typography;
+    padding: 7px 16px;
+    @media (min-width: 768px) {
+      font-size: variable.$fs-site-h3;
+      padding: 15px 128px;
+    }
+
+    &--repo,
+    &--mail,
+    &--social {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    &--gitLogo,
+    &--mailLogo,
+    &--socialLogo {
+      fill: #f5f5f5;
+    }
+    &--gitLogo {
+      width: 25px;
+      height: 25px;
+    }
+    &--mailLogo {
+      width: 20px;
+      height: 20px;
+    }
+    &--socialLogo {
+      width: 20px;
+      height: 20px;
+    }
+    @media (min-width: 768px) {
+      .footer__link--gitLogo {
+        width: 50px;
+        height: 50px;
+      }
+      .footer__link--mailLogo {
+        width: 35px;
+        height: 35px;
+      }
+      .footer__link--socialLogo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    @media (768px <= width <= 1024px) {
+      .footer__link--repo,
+      .footer__link--mail,
+      .footer__link--social {
+        gap: 16px;
+      }
+    }
+    @media (min-width: 1025px) {
+      .footer__link--repo,
+      .footer__link--mail,
+      .footer__link--social {
+        gap: 24px;
+      }
+    }
+  }
+}

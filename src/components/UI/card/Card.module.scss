@@ -1,0 +1,86 @@
+@use "../../../styles/settings/variables.scss" as variable;
+@use "../../../styles/fondation/typography.scss" as typo;
+.card {
+  background-color: #fff;
+  border-radius: 18px;
+  width: 288px;
+  height: 490px;
+  margin-bottom: 30px;
+  padding: 8px 8px 0px 8px;
+  font-family: typo.$primary-typography;
+
+  @media (min-width: 768px) {
+    width: 277px;
+    height: 480px;
+  }
+  @media (768px <= width <= 1024px) {
+    margin-bottom: 32px;
+  }
+  &__logo {
+    display: block;
+    width: 73px;
+    height: 73px;
+    padding: 8px;
+
+    @media (min-width: 768px) {
+      width: 76px;
+      height: 76px;
+    }
+  }
+  &__content {
+    padding-left: 8px;
+  }
+  &__title {
+    font-size: variable.$fs-site-mobile-h3;
+    margin-top: 32px;
+    font-weight: 500;
+    @media (min-width: 768px) {
+      font-size: variable.$fs-expertise-site-h3;
+      margin-top: 24px;
+    }
+  }
+  &__title::after {
+    display: block;
+    content: "";
+    border: solid 1px black;
+    width: 65%;
+    margin: 24px auto 16px auto;
+    @media (min-width: 768px) {
+      width: 60%;
+      margin: 16px auto;
+    }
+  }
+  &__txt {
+    &--intro {
+      line-height: 24px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      @media (min-width: 768px) {
+        line-height: 22px;
+      }
+    }
+    &--core {
+      line-height: 25.6px;
+    }
+  }
+  /**** Design des headers ****/
+  .html__header,
+  .react__header,
+  .typeScript__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33%;
+    width: 100%;
+    border-radius: 18px 18px 100% 0% / 18px 18px 50% 100%;
+  }
+  .html__header {
+    background: linear-gradient(to bottom left, #ff8c00, #ffd700);
+  }
+  .react__header {
+    background: linear-gradient(to bottom left, #0072ff, #0000dd);
+  }
+  .typeScript__header {
+    background: linear-gradient(to bottom left, #11998e, #38ef7d);
+  }
+}

@@ -1,0 +1,181 @@
+@use "../../../styles/settings/variables.scss" as variable;
+@use "../../../styles/fondation/typography.scss" as typo;
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 16px;
+  @media (min-width: 768px) {
+    margin: 0px;
+  }
+  &__title {
+    margin-top: 16px;
+    font-size: variable.$fs-site-mobile-h3;
+    font-weight: 400;
+    @media (min-width: 768px) {
+      font-size: variable.$fs-site-h3;
+    }
+    @media (768px <= width <= 1024px) {
+      margin-top: 32px;
+      margin-left: 48px;
+    }
+    &--number {
+      margin-right: 16px;
+      font-family: typo.$secondary-typography;
+    }
+  }
+  .item__content {
+    margin-top: 16px;
+    font-family: typo.$primary-typography;
+    font-size: variable.$fs-body;
+    @media (768px <= width <= 1024px) {
+      margin: 32px 142px 0px 142px;
+    }
+    .item__content--introduction,
+    .item__content--core,
+    .item__content--conclusion {
+      @media (min-width: 1025px) {
+        padding-left: 88px;
+      }
+    }
+    .item__content--introduction {
+      line-height: 24px;
+      font-weight: 500;
+      @media (min-width: 768px) {
+        font-size: variable.$fs-site-introduction;
+      }
+      @media (768px <= width <= 1024px) {
+        line-height: 22px;
+      }
+    }
+    .item__content--core {
+      line-height: 25.6px;
+      margin-top: 32px;
+      @media (768px <= width <= 1024px) {
+        line-height: 28px;
+      }
+    }
+    .item__content--conclusion {
+      line-height: 25.6px;
+      margin-top: 24px;
+      color: rgba($color: variable.$secondary-color, $alpha: 0.85);
+      @media (768px <= width <= 1024px) {
+        line-height: 22px;
+      }
+    }
+    .item__break--mobile {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+    .item__break--ipad {
+      display: none;
+      @media (768px <= width <= 1024px) {
+        display: inline;
+      }
+    }
+    .item__break--desktop {
+      display: none;
+      @media (min-width: 1025px) {
+        display: inline;
+      }
+    }
+  }
+  .item__media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+    @media (min-width: 1025px) {
+      padding-left: 90px;
+    }
+    &--video {
+      width: 100%;
+      max-width: 288px;
+      height: auto;
+      border-radius: 16px;
+      cursor: pointer;
+      @media (768px <= width <= 1024px) {
+        max-width: 407px;
+      }
+      @media (min-width: 1025px) {
+        max-width: 577px;
+      }
+    }
+    &--link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+    .link__txt {
+      font-family: typo.$secondary-typography;
+      font-weight: 700;
+
+      &--arrow {
+        width: 21px;
+        height: 21px;
+        rotate: -45deg;
+      }
+    }
+  }
+  .item__photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 32px;
+    @media (min-width: 1025px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 32px;
+      padding-left: 90px;
+    }
+    img {
+      width: 100%;
+      max-width: 288px;
+      height: auto;
+      border-radius: 16px;
+      @media (768px <= width <= 1024px) {
+        max-width: 407px;
+      }
+      @media (min-width: 1025px) {
+        max-width: 378px;
+      }
+    }
+  }
+  .item__button {
+    position: relative;
+    margin-top: 32px;
+    @media (min-width: 1025px) {
+      display: none;
+    }
+    &--dashBar {
+      margin: 0 auto;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      border: dashed 1px rgba($color: variable.$secondary-color, $alpha: 1);
+      width: 275px;
+      @media (768px <= width <= 1024px) {
+        width: 450px;
+      }
+    }
+  }
+}
+.showMore {
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 2500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.showLess {
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+  @media (min-width: 1025px) {
+    max-height: none;
+    height: fit-content;
+  }
+}
