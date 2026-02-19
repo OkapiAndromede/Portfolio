@@ -10,11 +10,7 @@ function Form() {
     email: string;
     message: string;
   };
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<ContactFormValues>();
+  const { register, handleSubmit } = useForm<ContactFormValues>();
 
   const onSubmit = async (data: ContactFormValues) => {
     try {
@@ -31,37 +27,56 @@ function Form() {
       toast.error("Failed to send your message");
     }
   };
+  const onInvalid = (errors: any) => {
+    if (errors.firstName) {
+      toast.error(errors.firstName.message);
+    }
+    if (errors.lastName) {
+      toast.error(errors.lastName.message);
+    }
+    if (errors.email) {
+      toast.error(errors.email.message);
+    }
+    if (errors.message) {
+      toast.error(errors.message.message);
+    }
+  };
 
   return (
-    <form className={style["formLayout"]} onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className={style["formLayout"]}
+      onSubmit={handleSubmit(onSubmit, onInvalid)}
+    >
       <div className={style["field"]}>
         <div className={style["field__name"]}>
-          <input
-            type="text"
-            id="firstName"
-            placeholder="John"
-            {...register("firstName", {
-              required: "You must provide a firstname",
-              pattern: {
-                value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-' ][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
-                message: "First name is invalid",
-              },
-            })}
-          />
-          {errors.firstName && <span>{errors.firstName.message}</span>}
-          <input
-            type="text"
-            id="lastName"
-            placeholder="Doe"
-            {...register("lastName", {
-              required: "You must provide a lastname",
-              pattern: {
-                value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-' ][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
-                message: "Last name is invalid",
-              },
-            })}
-          />
-          {errors.lastName && <span>{errors.lastName.message}</span>}
+          <div className={style["field__name--first"]}>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="John"
+              {...register("firstName", {
+                required: "You must provide a first name",
+                pattern: {
+                  value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-' ][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
+                  message: "First name is invalid",
+                },
+              })}
+            />
+          </div>
+          <div className={style["field__name--last"]}>
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Doe"
+              {...register("lastName", {
+                required: "You must provide a last name",
+                pattern: {
+                  value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[-' ][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
+                  message: "Last name is invalid",
+                },
+              })}
+            />
+          </div>
         </div>
         <input
           type="text"
@@ -76,7 +91,6 @@ function Form() {
             },
           })}
         />
-        {errors.email && <span>{errors.email.message}</span>}
         <textarea
           id="message"
           className={style["field__message"]}
@@ -89,7 +103,6 @@ function Form() {
             },
           })}
         />
-        {errors.message && <span>{errors.message.message}</span>}
       </div>
       <SubmitButton />
     </form>

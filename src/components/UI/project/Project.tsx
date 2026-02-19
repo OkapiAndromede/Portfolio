@@ -65,7 +65,12 @@ function Project({ project }: Props) {
               onClick={handleTogglePlay} // click mobile/Ipad
             />
             <div className={styles["item__media--link"]}>
-              <a className={styles["link__txt"]} href="#">
+              <a
+                className={styles["link__txt"]}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Visit {project.title} live{" "}
                 <br className={styles["link__txt--break"]} /> website
               </a>

@@ -11,6 +11,7 @@
   padding: 12.5px 19px;
   font-family: typo.$primary-typography;
   font-size: variable.$fs-landing-mobile-cta;
+  color: variable.$secondary-color;
   position: relative;
   cursor: pointer;
   @media (768px <= width <= 1024px) {
