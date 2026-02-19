@@ -191,15 +191,16 @@
     backdrop-filter: blur(5px);
     @media (min-width: 768px) {
       font-size: variable.$fs-body;
-      backdrop-filter: blur(2px);
     }
     @media (768px <= width <= 1024px) {
       margin: 48px 0px;
       padding: 0 48px;
+      backdrop-filter: blur(5px);
     }
     @media (min-width: 1025px) {
       padding: 0px;
       margin: 24px 131px 0px 129px;
+      backdrop-filter: blur(2px);
     }
     &--core,
     &--conclusion {
@@ -217,5 +218,8 @@
         display: block;
       }
     }
+  }
+  .highlight {
+    background-color: variable.$tertiary-color;
   }
 }
