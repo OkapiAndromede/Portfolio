@@ -1,9 +1,8 @@
 import { Resend } from "resend";
 import { contactSchema } from "./contact.schema.js";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export default async function handler(req: any, res: any) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   //1.Restriction de la méthode
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
