@@ -3,6 +3,7 @@ import type { Project as ProjectType } from "../../../assets/data/projects";
 import styles from "./Project.module.scss";
 import { projectTextMap } from "./projectTextMap";
 import { ShowButton } from "../button/Button";
+import videoIcon from "../../../assets/logo/video_icon.svg";
 
 type Props = {
   project: ProjectType;
@@ -70,7 +71,7 @@ function Project({ project }: Props) {
               ref={videoRef}
               className={styles["item__media--video"]}
               src={project.video}
-              poster={isMobile ? project.images.first : undefined}
+              poster={isMobile ? videoIcon : undefined}
               muted
               loop
               playsInline
