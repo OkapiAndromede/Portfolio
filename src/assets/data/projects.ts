@@ -19,6 +19,7 @@ export type Project = {
     second: string;
   };
   video: string;
+  link: string;
 };
 export const projects: Project[] = [
   {
@@ -30,6 +31,7 @@ export const projects: Project[] = [
       second: bookiHebergementOpti,
     },
     video: bookiVideo,
+    link: "https://okapiandromede.github.io/Booki/",
   },
   {
     id: "ohmyfood",
@@ -40,6 +42,7 @@ export const projects: Project[] = [
       second: foodRestaurantOpti,
     },
     video: foodVideo,
+    link: "https://okapiandromede.github.io/Ohmyfood/",
   },
   {
     id: "kasa",
@@ -50,5 +53,6 @@ export const projects: Project[] = [
       second: kasaHouse2Opti,
     },
     video: kasaVideo,
+    link: "https://okapiandromede.github.io/Kasa/",
   },
 ];
