@@ -40,10 +40,6 @@ export function ShowButton({ isActive, onClick }: ShowButtonProps) {
   );
 }
 
-type SubmitButtonProps = {
-  onClick: () => void;
-};
-
 export function SubmitButton() {
   return (
     <button className={styles["submitButton"]} type="submit" value={"SUBMIT"}>
