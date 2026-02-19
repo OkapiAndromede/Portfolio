@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { contactSchema } from "./contact.schema";
+import { contactSchema } from "./contact.schema.js";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
