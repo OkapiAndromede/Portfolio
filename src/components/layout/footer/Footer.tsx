@@ -38,7 +38,12 @@ function Footer() {
           </NavLink>
         </li>
         <li>
-          <a className={style["footer__link--social"]} href="#">
+          <a
+            className={style["footer__link--social"]}
+            href="https://www.linkedin.com/in/neal-muller-9342b03b2/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span>Linkedin</span>
             <svg
               className={style["footer__link--socialLogo"]}
