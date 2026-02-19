@@ -1,7 +1,7 @@
 import { Resend } from "resend";
-import { contactSchema } from "../src/validation/contact.schema";
+import { contactSchema } from "../validation/contact.schema";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY);
 
 export default async function handler(req: any, res: any) {
   //1.Restriction de la méthode
