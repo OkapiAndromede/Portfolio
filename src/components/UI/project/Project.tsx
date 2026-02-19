@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import type { Project as ProjectType } from "../../../assets/data/projects";
 import styles from "./Project.module.scss";
 import { projectTextMap } from "./projectTextMap";
@@ -11,6 +11,18 @@ type Props = {
 function Project({ project }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isActive, setIsActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Détection de la largeur
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile(); // Check initial
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const Introduction = projectTextMap[project.id]?.introduction;
   const Core = projectTextMap[project.id]?.core;
@@ -63,8 +75,9 @@ function Project({ project }: Props) {
               playsInline
               webkit-playsinline="true"
               preload="auto"
-              onMouseEnter={handlePlay}
-              onMouseLeave={handlePause}
+              autoPlay={isMobile}
+              onMouseEnter={!isMobile ? handlePlay : undefined}
+              onMouseLeave={!isMobile ? handlePause : undefined}
               onClick={handleTogglePlay}
             />
             <div className={styles["item__media--link"]}>
