@@ -19,7 +19,7 @@ export default async function handler(req: any, res: any) {
     const { firstName, lastName, email, message } = parsed.data;
 
     //4. Envoi de l'email via Resend
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "neal.henri.muller@gmail.com",
       subject: `New message from ${firstName} ${lastName}`,
@@ -31,8 +31,12 @@ export default async function handler(req: any, res: any) {
             <p> <strong> Message:</strong> ${message} </p>
             `,
     });
+    if (error) {
+      console.error("Resend Error:", error);
+      return res.status(400).json({ error });
+    }
 
-    return res.status(200).json({ success: true });
+    return res.status(200).json({ success: true, data });
   } catch (error) {
     return res.status(500).json({ error: "Email sending failed" });
   }
