@@ -26,12 +26,14 @@ function Project({ project }: Props) {
 
   //Logique spécifique au clic
   const handleTogglePlay = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        videoRef.current.play();
-      }
-      if (videoRef.current.played) {
-        videoRef.current.pause();
+    const video = videoRef.current;
+    if (video) {
+      if (video.paused) {
+        video.play().catch((error) => {
+          console.error("Lecture bloquée par le navigateur :", error);
+        });
+      } else {
+        video.pause();
       }
     }
   };
@@ -59,10 +61,11 @@ function Project({ project }: Props) {
               muted
               loop
               playsInline
+              webkit-playsinline="true"
               preload="auto"
-              onMouseEnter={handlePlay} //Hover desktop
-              onMouseLeave={handlePause} //Quitter desktop
-              onClick={handleTogglePlay} // click mobile/Ipad
+              onMouseEnter={handlePlay}
+              onMouseLeave={handlePause}
+              onClick={handleTogglePlay}
             />
             <div className={styles["item__media--link"]}>
               <a
